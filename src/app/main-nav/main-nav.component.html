@@ -1,3 +1,9 @@
-<p>
-  main-nav works!
-</p>
+<div class="main-nav hide-mobile">
+  <div class="container">
+    <ul class="menu">
+      <li *ngFor="let link of navLinks" class="menu-item">
+        <a href="{{link.anchor}}" class="menu-item-link">{{link.name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
