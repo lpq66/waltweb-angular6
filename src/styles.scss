@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+@import '_variables';
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $roboto;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.onehalfrem {
+  font-size: 1.5rem;
+}
+
+.hide-mobile {
+  @include mobile-down {
+    display: none;
+  }
+}
+
+.hide-tablet {
+  @include tablet-down {
+    display: none;
+  }
+}
+
+.hide-desktop {
+  @media (min-width: 991px) {
+    display: none;
+  }
+}

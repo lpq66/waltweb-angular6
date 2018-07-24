@@ -1,0 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+$darkBlack: #212121;
+$black: #333;
+$purple: #4a148c;
+@mixin tablet-down() {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin mobile-down() {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+$roboto: 'Roboto',
+sans-serif;
