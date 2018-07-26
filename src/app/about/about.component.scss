@@ -1,0 +1,51 @@
+@import '../../_variables.scss';
+.about {
+  height: 650px;
+  position: relative;
+  @include section-padding;
+  border-top: 4px solid rgba(0, 0, 0, 0.05);
+  background-color: $purple;
+  background-attachment: fixed;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nMjg4JyBoZWlnaHQ9JzE4MCcgdmlld0JveD0nMCAwIDE0NCA5MCc+Cgk8ZGVmcz4KCQk8cmVjdCBpZD0ncycgZmlsbD0nIzAwMDAwMCcgd2lkdGg9JzknIGhlaWdodD0nOScvPgoJPC9kZWZzPgoJPGcgaWQ9J2InPgoJPHVzZSB4PScwJyB5PScwJyBmaWxsLW9wYWNpdHk9JzAuMDgnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSc5JyB5PScwJyBmaWxsLW9wYWNpdHk9JzAuMDQnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PScxOCcgeT0nMCcgZmlsbC1vcGFjaXR5PScwLjEyJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMjcnIHk9JzAnIGZpbGwtb3BhY2l0eT0nMC4xJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMzYnIHk9JzAnIGZpbGwtb3BhY2l0eT0nMC4wNCcgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzQ1JyB5PScwJyBmaWxsLW9wYWNpdHk9JzAuMDgnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSc1NCcgeT0nMCcgZmlsbC1vcGFjaXR5PScwLjE0JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMCcgeT0nOScgZmlsbC1vcGFjaXR5PScwLjA2JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nOScgeT0nOScgZmlsbC1vcGFjaXR5PScwLjA4JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMTgnIHk9JzknIGZpbGwtb3BhY2l0eT0nMC4wNCcgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzI3JyB5PSc5JyBmaWxsLW9wYWNpdHk9JzAuMTInIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSczNicgeT0nOScgZmlsbC1vcGFjaXR5PScwLjA4JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nNDUnIHk9JzknIGZpbGwtb3BhY2l0eT0nMC4wNicgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzU0JyB5PSc5JyBmaWxsLW9wYWNpdHk9JzAuMDInIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSc2MycgeT0nOScgZmlsbC1vcGFjaXR5PScwLjA4JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMCcgeT0nMTgnIGZpbGwtb3BhY2l0eT0nMC4wNicgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzknIHk9JzE4JyBmaWxsLW9wYWNpdHk9JzAuMDQnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PScxOCcgeT0nMTgnIGZpbGwtb3BhY2l0eT0nMC4xMicgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzI3JyB5PScxOCcgZmlsbC1vcGFjaXR5PScwLjA0JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMzYnIHk9JzE4JyBmaWxsLW9wYWNpdHk9JzAuMTInIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSc0NScgeT0nMTgnIGZpbGwtb3BhY2l0eT0nMC4wOCcgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzU0JyB5PScxOCcgZmlsbC1vcGFjaXR5PScwLjA2JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nNjMnIHk9JzE4JyBmaWxsLW9wYWNpdHk9JzAuMTQnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PScwJyB5PScyNycgZmlsbC1vcGFjaXR5PScwLjA4JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nOScgeT0nMjcnIGZpbGwtb3BhY2l0eT0nMC4wNicgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzE4JyB5PScyNycgZmlsbC1vcGFjaXR5PScwLjEnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PScyNycgeT0nMjcnIGZpbGwtb3BhY2l0eT0nMC4wNicgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzQ1JyB5PScyNycgZmlsbC1vcGFjaXR5PScwLjEyJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nNTQnIHk9JzI3JyBmaWxsLW9wYWNpdHk9JzAuMDInIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSc2MycgeT0nMjcnIGZpbGwtb3BhY2l0eT0nMC4wNicgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzAnIHk9JzM2JyBmaWxsLW9wYWNpdHk9JzAuMDInIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSc5JyB5PSczNicgZmlsbC1vcGFjaXR5PScwLjEyJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMTgnIHk9JzM2JyBmaWxsLW9wYWNpdHk9JzAuMDYnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PScyNycgeT0nMzYnIGZpbGwtb3BhY2l0eT0nMC4xJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMzYnIHk9JzM2JyBmaWxsLW9wYWNpdHk9JzAuMDQnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSc1NCcgeT0nMzYnIGZpbGwtb3BhY2l0eT0nMC4xJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nNjMnIHk9JzM2JyBmaWxsLW9wYWNpdHk9JzAuMDQnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPC9nPgoJPHVzZSB4PSctNzInIHk9JzQ1JyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgMSAwIDApJyB4bGluazpocmVmPScjYicgLz4KCTx1c2UgeD0nLTE0NCcgeT0nLTYzJyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgLTEgMCAwKScgeGxpbms6aHJlZj0nI2InIC8+Cgk8dXNlIHg9JzcyJyB5PSctMTA4JyB0cmFuc2Zvcm09J21hdHJpeCgxIDAgMCAtMSAwIDApJyB4bGluazpocmVmPScjYicgLz4KCTx1c2UgeD0nNzInIHk9Jy0xOCcgdHJhbnNmb3JtPSdtYXRyaXgoMSAwIDAgLTEgMCAwKScgeGxpbms6aHJlZj0nI2InIC8+Cjwvc3ZnPg==);
+  &-card {
+    background: $purple;
+    margin-right: 2rem;
+    position: relative;
+    z-index: 2;
+    border-radius: 2px;
+    padding: 3rem;
+    transition: all .3s ease;
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+    &:hover {
+      transform: translateX(-25%);
+      background: #fff;
+      @include mobile-down {
+        transform: translateX(0);
+      }
+      .about-card-content {
+        color: $purple;
+      }
+    }
+    &-content {
+      color: #ffffff;
+      &-title {
+        font-size: 3rem;
+        font-family: $title;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.skew {
+  position: absolute;
+  bottom: -78%;
+  width: 100%;
+  height: 85%;
+  background: #ffffff;
+  transform: skewY(15deg);
+}
+
+.skew-r {
+  transform: skewY(-15deg);
+}

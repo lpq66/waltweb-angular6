@@ -1,4 +1,5 @@
-<div class="main-nav hide-mobile">
+<div class="main-nav hide-mobile" (window:scroll)="onScroll($event)">
+  <img src="../../assets/logo.png" title="WALTWEB logo">
   <div class="container">
     <ul class="menu">
       <li *ngFor="let link of navLinks" class="menu-item">

@@ -1,0 +1,10 @@
+<div class="wcid">
+  <div class="container">
+    <h2 class="wcid-title">What can I do for you</h2>
+    <ul class="wcid-content">
+      <li class="wcid-content-item" *ngFor="let item of wcidItems">
+        <img src="{{item.img}}" class="wcid-content-item-img" title="{{item.text}}">
+        <p class="wcid-content-item-description">{{item.text}}</p>
+      </li>
+    </ul>
+  </div>

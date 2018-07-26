@@ -16,7 +16,7 @@ export class TopbarComponent implements OnInit {
   tmail = faEnvelopeOpen;
   phone = faPhone;
 
-  socialLinks: = {
+  socialLinks = {
     fb: 'https://www.facebook.com/walter.loburak',
     tw: 'https://twitter.com/vldlbrk',
     lin: 'https://www.linkedin.com/in/lpq66',

@@ -1,0 +1,38 @@
+@import '../../_variables.scss';
+.hero {
+  height: 75vh;
+  width: 100%;
+  background: url(https://waltweb.com/wp-content/uploads/2017/10/Chicago-skyline-min.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  background-attachment: fixed;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  &-title {
+    font-size: 3rem;
+    text-shadow: 0px 4px 12px #000;
+    mix-blend-mode: overlay;
+    transition: all 1s ease;
+    @include mobile-down {
+      font-size: 2rem;
+    }
+    &:hover {
+      mix-blend-mode: normal;
+    }
+  }
+  &-sub-title {
+    font-size: 3rem;
+    text-shadow: 0px 4px 12px #000;
+    mix-blend-mode: normal;
+    text-transform: uppercase;
+    @include mobile-down {
+      font-size: 2rem;
+    }
+    &:hover {
+      mix-blend-mode: overlay;
+    }
+  }
+}

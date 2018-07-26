@@ -5,6 +5,26 @@
   background: $purple;
   position: relative;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: all .3s ease;
+  &.sticky {
+    position: fixed;
+    top: 0px;
+    transition: all 1s ease;
+    .menu {
+      padding: 0;
+    }
+    img {
+      width: 33px;
+      transition: all 1s ease;
+    }
+  }
+  img {
+    position: absolute;
+    right: 33px;
+    top: 5px;
+    width: auto;
+    transition: all 1s ease;
+  }
   .menu {
     display: flex;
     flex-flow: row wrap;
@@ -56,6 +76,9 @@
         font-size: 18px;
         color: #fff;
         transition: all .5s ease-in-out;
+        @include tablet-down {
+          font-size: 0.9rem;
+        }
         &:before {
           content: "";
           position: absolute;

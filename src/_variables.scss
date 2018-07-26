@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Roboto|Lobster|Baloo+Tamma);
 $darkBlack: #212121;
 $black: #333;
 $purple: #4a148c;
@@ -14,5 +14,14 @@ $purple: #4a148c;
   }
 }
 
-$roboto: 'Roboto',
+$p: 'Roboto',
 sans-serif;
+$title: 'Lobster',
+sans-serif;
+@mixin section-padding {
+  padding: 6rem 0;
+}
+
+@mixin title-shadow {
+  text-shadow: 0 1px 0 #616161, 0 2px 0 #616161, 0 3px 0 #616161, 0 4px 0 #616161, 0 5px 0 #424242, 0 6px 1px rgba(0, 0, 0, .1);
+}

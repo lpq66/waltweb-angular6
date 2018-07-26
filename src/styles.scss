@@ -3,18 +3,25 @@
 @import '~bootstrap/scss/bootstrap-reboot';
 @import '~bootstrap/scss/bootstrap-grid';
 @import '_variables';
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: $roboto;
+  font-family: $p;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-family: $title;
+  font-size: 2.8em;
 }
 
 a {
   text-decoration: none;
-  font-family: $roboto;
+  font-family: $p;
   &:hover {
     text-decoration: none;
   }
@@ -22,6 +29,7 @@ a {
 
 ul {
   list-style: none;
+  margin-bottom: 0px;
 }
 
 .onehalfrem {

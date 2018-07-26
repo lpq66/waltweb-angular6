@@ -1,0 +1,37 @@
+@import '../../_variables.scss';
+.wcid {
+  height: 500px;
+  padding: 1rem 0 6rem;
+  position: relative;
+  z-index: 3;
+  &-title {
+    @include title-shadow;
+    text-align: center;
+  }
+  &-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    &-item {
+      padding: 2rem;
+      width: 25%;
+      @include mobile-down {
+        width: 33%;
+      }
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-items: center;
+      &-img {
+        width: 55px;
+      }
+      &-description {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-family: 'Baloo Tamma', cursive;
+      }
+    }
+  }
+}
