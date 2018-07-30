@@ -29,7 +29,11 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/scrollreveal/dist/scrollreveal.js",
+              "node_modules/gsap/src/uncompressed/TweenMax.js",
+              "node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -77,7 +81,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "../.node_modules/scrollreveal/dist/scrollreveal.js"
+
             ],
             "assets": [
               "src/favicon.ico",

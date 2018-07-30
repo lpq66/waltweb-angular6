@@ -1,6 +1,5 @@
 @import '../../_variables.scss';
 .wcid {
-  height: 500px;
   padding: 1rem 0 6rem;
   position: relative;
   z-index: 3;
@@ -16,6 +15,14 @@
     &-item {
       padding: 2rem;
       width: 25%;
+      opacity: 0;
+      transform: translateX(-20px) rotateX(-90deg);
+      transition: .5s all ease;
+      @for $i from 1 through 11 {
+        &:nth-child(#{$i}) {
+          transition-delay: (0.1s * $i);
+        }
+      }
       @include mobile-down {
         width: 33%;
       }
@@ -34,4 +41,10 @@
       }
     }
   }
+}
+
+.stagger {
+  opacity: 1;
+  transform: translateX(0px) rotateX(0);
+  transition: .5s all cubic-bezier(0.000, 1.235, 0.330, 1.650);
 }

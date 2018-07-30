@@ -12,9 +12,15 @@
     transition: all 1s ease;
     .menu {
       padding: 0;
+      &-item {
+        padding: 15px 0;
+        &-link {
+          padding: 16px 20px;
+        }
+      }
     }
     img {
-      width: 33px;
+      width: 45px;
       transition: all 1s ease;
     }
   }

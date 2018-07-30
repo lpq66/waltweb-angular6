@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
-import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
+import { trigger, style, transition, animate, keyframes, query, stagger, state } from '@angular/animations';
+
 
 @Component({
   selector: 'app-hero',
@@ -12,7 +13,6 @@ export class HeroComponent implements OnInit {
 
   title: any;
   subTitle: any;
-
   event: MouseEvent;
   clientX = 0;
   clientY = 0;
@@ -41,6 +41,13 @@ export class HeroComponent implements OnInit {
 
   }
 
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const titleItem = this.elRef.nativeElement.querySelectorAll('.hero div')
+    titleItem.forEach(item => {
+      item.classList.add('animate')
+    })
+  }
 
   ngOnInit(): any {
 

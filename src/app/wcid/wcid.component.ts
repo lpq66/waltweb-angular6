@@ -1,10 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { trigger, style, transition, animate, keyframes, query, stagger, state } from '@angular/animations';
+
 
 @Component({
   selector: 'app-wcid',
   templateUrl: './wcid.component.html',
-  styleUrls: ['./wcid.component.scss']
+  styleUrls: ['./wcid.component.scss'],
 })
+
 export class WcidComponent implements OnInit {
 
   wcidItems: any = [{
@@ -31,9 +34,34 @@ export class WcidComponent implements OnInit {
     img: '/../../assets/11.svg', text: 'Search engine optimization'
   }]
 
-  constructor() { }
+
+
+  constructor(public el: ElementRef) { }
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop
+    const scrollPosition = window.pageYOffset
+    const offset = componentPosition - 200
+    const wcidItem = this.el.nativeElement.querySelectorAll('.wcid-content-item')
+
+    if (scrollPosition >= offset) {
+
+      wcidItem.forEach(item => {
+        item.classList.add('stagger')
+      })
+    } else {
+
+      wcidItem.forEach(item => {
+        item.classList.remove('stagger')
+      })
+    }
+
+  }
+
 
   ngOnInit() {
+
   }
 
 }

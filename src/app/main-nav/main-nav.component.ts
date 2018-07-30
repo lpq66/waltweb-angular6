@@ -16,6 +16,7 @@ export class MainNavComponent implements OnInit {
   top: any;
   distance: number;
   offset: number;
+  scrollSpy: any;
 
   navLinks = [{
     anchor: '#about', name: 'About me'
@@ -53,6 +54,7 @@ export class MainNavComponent implements OnInit {
 
 
   ngOnInit() {
+
   }
 
 }

@@ -10,7 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { WcidComponent } from './wcid/wcid.component';
 import { PortfolioComponent } from './portfolio/portfolio.component'
 import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
-import { InViewportModule, WindowRef } from '@thisissoon/angular-inviewport';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { InViewportModule, WindowRef } from '@thisissoon/angular-inviewport';
     AppRoutingModule,
     FontAwesomeModule,
     ParallaxModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

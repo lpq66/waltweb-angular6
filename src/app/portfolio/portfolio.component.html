@@ -1,3 +1,16 @@
-<p>
-  portfolio works!
-</p>
+<div class="portrax" parallax [config]="{initialValue: 0, ratio: .1}">
+  <div class="portfolio">
+    <div class="container">
+      <h2 class="portfolio-title">Portfolio</h2>
+      <ul class="portfolio-content">
+        <li class="portfolio-content-item" *ngFor="let item of portfolioItems">
+          <div class="item-hover">
+            <h3>{{item.title}}</h3>
+            <a href="{{item.link}}" target="_blank">Live</a>
+          </div>
+          <img src="{{item.img}}" class="portfolio-content-item-img" title="{{item.title}}">
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
