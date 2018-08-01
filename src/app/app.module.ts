@@ -11,6 +11,10 @@ import { WcidComponent } from './wcid/wcid.component';
 import { PortfolioComponent } from './portfolio/portfolio.component'
 import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { TestiComponent } from './testi/testi.component';
+import { ContactComponent } from './contact/contact.component';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { PricingComponent } from './pricing/pricing.component';
 
 
 @NgModule({
@@ -22,6 +26,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     AboutComponent,
     WcidComponent,
     PortfolioComponent,
+    TestiComponent,
+    ContactComponent,
+    PricingComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +36,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     FontAwesomeModule,
     ParallaxModule,
     BrowserAnimationsModule,
+    NgxPageScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

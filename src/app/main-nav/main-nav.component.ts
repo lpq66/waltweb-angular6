@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
-import { getDirectiveInstance } from '@angular/core/src/render3/instructions';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { PageScrollConfig } from 'ngx-page-scroll';
 
 @Component({
   selector: 'app-main-nav',
@@ -8,7 +9,19 @@ import { getDirectiveInstance } from '@angular/core/src/render3/instructions';
 })
 export class MainNavComponent implements OnInit {
 
-  constructor(private elRef: ElementRef) { }
+  constructor(private elRef: ElementRef) {
+    PageScrollConfig.defaultScrollOffset = 50;
+    PageScrollConfig.defaultDuration = 600;
+    PageScrollConfig.defaultEasingLogic = {
+      ease: (t: number, b: number, c: number, d: number): number => {
+        // easeInOutExpo easing
+        if (t === 0) return b;
+        if (t === d) return b + c;
+        if ((t /= d / 2) < 1) return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
+        return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
+      }
+    };
+  }
 
   stickyNav: any;
   stickPoint: any = 50;

@@ -1,7 +1,6 @@
 import { Component, OnInit, NgModule, ElementRef, HostListener } from '@angular/core';
 import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
 
-
 @NgModule({
   declarations: [],
   imports: [],
@@ -18,7 +17,9 @@ export class AboutComponent implements OnInit {
     title: 'Little about me'
   }
 
-  constructor(private elRef: ElementRef) { }
+  constructor(private elRef: ElementRef) {
+
+  }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {

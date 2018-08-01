@@ -1,0 +1,25 @@
+<div class="testi" id="testimonials">
+  <div class="container">
+    <h2 class="testi-title">
+      Some words from my clients
+    </h2>
+    <div class="testi-slider">
+      <input type="radio" name="slides" id="slides_1" checked />
+      <input type="radio" name="slides" id="slides_2" />
+      <input type="radio" name="slides" id="slides_3" />
+      <ul [style.width.px]="this.containerW">
+        <li *ngFor="let item of testi">
+          <blockquote>{{item.text}}</blockquote>
+          <div class="chat"></div>
+          <cite>{{item.person}}</cite>
+        </li>
+      </ul>
+      <div class="arrows">
+        <label for="slides_1"></label>
+        <label for="slides_2"></label>
+        <label for="slides_3"></label>
+        <label for="slides_1" class="goto-first"></label>
+      </div>
+    </div>
+  </div>
+</div>

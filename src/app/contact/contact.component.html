@@ -1,0 +1,26 @@
+<div class="contact" id="contact">
+  <div class="container">
+    <a pageScroll href="#top" class="btn-top">
+      <fa-icon [icon]="arrowLeft"></fa-icon>
+    </a>
+    <h2 class="contact-title">Contact me</h2>
+    <div class="contact-content">
+      <ul class="contact-content-items">
+        <li class="contact-content-item" *ngFor="let item of contactMe">
+          <a class="contact-content-item-link" target="_blank" href="{{item.link}}">
+            <fa-icon class="contact-content-item-icon" [icon]="item.icon" [id]="item.id"></fa-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <p>© 2018 Made by me.</p>
+      <div class="footer-links">
+        <a class="grey-text text-lighten-4 right" style="padding: 0 10px" href="http://codepen.io/lpq66/">Copeden</a>
+        <a class="grey-text text-lighten-4 right" style="padding: 0 10px" href="https://github.com/lpq66">Github</a>
+      </div>
+    </div>
+  </footer>
+</div>

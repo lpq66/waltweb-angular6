@@ -2,6 +2,7 @@
 $darkBlack: #212121;
 $black: #333;
 $purple: #4a148c;
+$gray: #424242;
 @mixin tablet-down() {
   @media (max-width: 991px) {
     @content;
@@ -19,7 +20,7 @@ sans-serif;
 $title: 'Lobster',
 sans-serif;
 @mixin section-padding {
-  padding: 6rem 0;
+  padding: 5rem 0;
 }
 
 @mixin title-shadow {

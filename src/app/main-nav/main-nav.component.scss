@@ -38,6 +38,7 @@
     &-item {
       position: relative;
       padding: 8px 0px;
+      cursor: pointer;
       &:before {
         content: "";
         position: absolute;
