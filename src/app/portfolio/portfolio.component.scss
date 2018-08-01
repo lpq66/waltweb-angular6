@@ -47,6 +47,7 @@
       }
       @include mobile-down {
         width: 100%;
+        margin-bottom: 3rem;
       }
       & .item-hover {
         position: absolute;

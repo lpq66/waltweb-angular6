@@ -1,5 +1,6 @@
 @import '../../_variables.scss';
 .testi {
+  overflow-x: hidden;
   background: $purple;
   @include section-padding;
   perspective: 300;
@@ -20,13 +21,13 @@
   text-align: left;
   position: relative;
   margin-bottom: 22px;
-  transform: rotateX(210deg) translateZ(-10px) scale(0.3);
+  transform: rotateX(-210deg) translateZ(-10px) scale(0.3);
   opacity: 0;
   transition: all 1s ease;
   &.animate {
     transform: rotateX(0) translateZ(0) scale(1) !important;
     opacity: 1;
-    transition: all 1s cubic-bezier(0, .97, 0, 1.29);
+    transition: all .9s cubic-bezier(0, .97, 0, 1.29);
   }
   > {
     input {

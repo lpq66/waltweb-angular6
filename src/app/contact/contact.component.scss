@@ -12,6 +12,9 @@
     right: 0;
     cursor: pointer;
     transition: .6s cubic-bezier(0.000, 1.235, 0.330, 1.650) all;
+    @include mobile-down {
+      right: 35px;
+    }
     &:hover {
       transform: rotate(90deg);
     }
@@ -45,6 +48,13 @@
       transform: rotate(90deg);
       opacity: 0;
       transition: .6s ease opacity, .3s ease transform;
+      @include mobile-down {
+        width: 33.3%;
+        display: flex;
+        margin: 0rem;
+        justify-content: center;
+        margin-bottom: 3rem;
+      }
       @for $a from 1 to 6 {
         &:nth-child(#{$a}) {
           transition-delay: (0.1s * $a)
@@ -119,6 +129,9 @@ footer {
   background: $darkBlack;
   font-size: 0.9rem;
   margin-top: 5rem;
+  @include mobile-down {
+    margin-top: 3rem;
+  }
   transform: translateX(200%);
   transition: all 1s cubic-bezier(0, .97, .6, .92);
   &.animate {
@@ -131,6 +144,7 @@ footer {
       margin-left: auto;
       a {
         color: #fff;
+        padding: 0 10px;
       }
     }
     p {
