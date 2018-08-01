@@ -8,3 +8,43 @@
     </ul>
   </div>
 </div>
+<div class="main-nav--mobile hide-desktop" (window:scroll)="onScroll($event)">
+  <div class="mobile-container container">
+    <button (click)="toggle()" (click)="btnToggle()">
+      <svg [@btn]="openName" viewBox="1124 -655 233 53" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 75px;padding: 19px 5px;">
+        <g id="menu-svg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1124.000000, -655.000000)"
+          style="
+      stroke: aliceblue;
+      fill: #fff;
+  ">
+          <g id="hamburger" transform="translate(63.000000, 0.000000)" fill="none" style="
+      fill: #fff;
+  ">
+            <polygon id="Rectangle-2-Copy-2" points="0.903315315 52.4799995 0.903315315 42 52.7916036 42 52.7916036 52.4799995"></polygon>
+            <polygon id="Rectangle-2-Copy" points="0.903315315 31.4799995 0.903315315 21 52.7916036 21 52.7916036 31.4799995"></polygon>
+            <polygon id="Rectangle-2" points="0.903315315 10.4799995 0.903315315 0 52.7916036 0 52.7916036 10.4799995"></polygon>
+          </g>
+          <path d="M210.106345,52.79175 C224.042056,52.79175 232.863065,45.06975 232.863065,29.32875 L232.863065,0 L221.447642,0 L221.447642,29.77425 C221.447642,38.016 217.222453,42.24825 210.254597,42.24825 C203.286741,42.24825 199.061552,37.8675 199.061552,29.403 L199.061552,0 L187.646128,0 L187.646128,29.7 C187.646128,44.9955 196.170633,52.79175 210.106345,52.79175 L210.106345,52.79175 Z"
+            id="M-NU" fill="none" style="
+      fill: #fff;
+  "></path>
+          <polygon id="M-NU" fill="none" points="128.665641 51.975 139.932812 51.975 139.932812 18.93375 165.061569 51.975 174.772091 51.975 174.772091 0 163.50492 0 163.50492 32.00175 139.191551 0 128.665641 0"
+            style="
+      fill: #fff;
+  "></polygon>
+          <polygon id="M-NU" fill="none" points="0 51.975 11.193045 51.975 11.193045 18.2655 25.6476396 40.2435 25.9441441 40.2435 40.546991 18.04275 40.546991 51.975 51.8882883 51.975 51.8882883 0 39.5833514 0 25.9441441 21.978 12.3049369 0 0 0"
+            style="
+      fill: #fff;
+  "></polygon>
+        </g>
+      </svg>
+    </button>
+    <img src="../../assets/logo.png" title="WALTWEB logo">
+  </div>
+  <ul class="menu" [@openNav]="stateName">
+    <li *ngFor="let link of navLinks" class="menu-item" id="item-{{link.id}}">
+      <a pageScroll href="{{link.anchor}}" class="menu-item-link">{{link.name}}</a>
+    </li>
+  </ul>
+</div>
