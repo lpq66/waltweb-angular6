@@ -30,9 +30,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/scrollreveal/dist/scrollreveal.js",
-              "node_modules/gsap/src/uncompressed/TweenMax.js",
-              "node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"
+
             ]
           },
           "configurations": {

@@ -42,6 +42,12 @@
       position: relative;
       padding: 8px 0px;
       cursor: pointer;
+      &.active {
+        a {
+          background: #fff;
+          color: $purple;
+        }
+      }
       &:before {
         content: "";
         position: absolute;
@@ -183,5 +189,21 @@
 .hide-desktop {
   @media (min-width: 768px) {
     display: none;
+  }
+}
+
+.menu--mobile {
+  box-shadow: 1px 5px 15px 0 rgba(0, 0, 0, 0.3);
+  li {
+    cursor: pointer;
+    a {
+      padding: 2rem 10%;
+    }
+    &.active {
+      background: $purple;
+      a {
+        color: #fff;
+      }
+    }
   }
 }

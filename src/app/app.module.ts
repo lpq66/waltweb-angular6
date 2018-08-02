@@ -36,7 +36,7 @@ import { PricingComponent } from './pricing/pricing.component';
     FontAwesomeModule,
     ParallaxModule,
     BrowserAnimationsModule,
-    NgxPageScrollModule
+    NgxPageScrollModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

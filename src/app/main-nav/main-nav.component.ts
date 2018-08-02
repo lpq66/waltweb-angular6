@@ -26,7 +26,7 @@ import {
     ]),
     trigger('btn', [
       state('open', style({
-        transform: "rotate(20deg)"
+        transform: "rotate(190deg)"
       })),
       state('close', style({
         transform: "rotate(0deg)"
@@ -59,6 +59,7 @@ export class MainNavComponent implements OnInit {
   distance: number;
   offset: number;
   scrollSpy: any;
+  mobileNavLinks: any;
 
   navLinks = [{
     anchor: '#about', name: 'About me', id: 1
@@ -70,8 +71,6 @@ export class MainNavComponent implements OnInit {
     anchor: '#testimonials', name: 'Testimonials', id: 4
   }, {
     anchor: '#contact', name: 'Contact', id: 5
-  }, {
-    anchor: '#pricing', name: 'Pricing', id: 6
   }]
 
   getDistance = () => {
@@ -97,6 +96,12 @@ export class MainNavComponent implements OnInit {
     this.open = !this.open
   }
 
+  selectedIndex: number;
+  select(index: number) {
+    this.selectedIndex = index;
+  }
+
+
   @HostListener('window:scroll', ['$event'])
   onScroll($event): void {
     this.stickyNav = this.elRef.nativeElement.querySelector('.main-nav');
@@ -117,10 +122,17 @@ export class MainNavComponent implements OnInit {
     }
   }
 
-
+  mobNavLinks() {
+    this.mobileNavLinks = this.elRef.nativeElement.querySelectorAll('.item-link--mobile')
+    console.log(this.mobileNavLinks)
+    this.mobileNavLinks.forEach(item => {
+      this.show = false
+      this.open = false
+    })
+  }
 
   ngOnInit() {
-
+    this.mobNavLinks()
   }
 
 }

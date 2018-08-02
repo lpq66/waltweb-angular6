@@ -46,7 +46,6 @@ export class HeroComponent implements OnInit {
     const componentPosition = this.elRef.nativeElement.offsetTop
     const scrollPosition = window.pageYOffset
     const offsetMobile = componentPosition - 2000;
-    console.log(`component: ${componentPosition}, scroll: ${scrollPosition} offset: ${offsetMobile}`)
     const titleItem = this.elRef.nativeElement.querySelectorAll('.hero div')
     titleItem.forEach(item => {
       item.classList.add('animate')

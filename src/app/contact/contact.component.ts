@@ -39,7 +39,7 @@ export class ContactComponent implements OnInit {
   checkScroll() {
     const componentPosition = this.el.nativeElement.offsetTop
     const scrollPosition = window.pageYOffset
-    const offset = componentPosition - 500
+    const offset = componentPosition - 520
     const tabletOffset = componentPosition - 900
     const contactItem = this.el.nativeElement.querySelectorAll('.contact-content-item')
     const footer = this.el.nativeElement.querySelector('footer')
@@ -55,7 +55,7 @@ export class ContactComponent implements OnInit {
       })
     }
 
-    if (scrollPosition >= offset + 100) {
+    if (scrollPosition >= offset) {
       footer.classList.add('animate')
     } else {
       footer.classList.remove('animate')

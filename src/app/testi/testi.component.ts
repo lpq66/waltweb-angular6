@@ -36,7 +36,6 @@ export class TestiComponent implements OnInit {
     const posOffset = componentPosition - 600
     const slider = this.el.nativeElement.querySelector('.testi-slider')
     this.iPadPortrait = this.el.nativeElement.querySelector('#testimonials').offsetWidth
-    console.log(this.iPadPortrait)
     if (this.iPadPortrait == 1024) {
       if (scrollPosition >= posOffset) {
         slider.classList.add('ipad')
