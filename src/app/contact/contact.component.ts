@@ -40,14 +40,15 @@ export class ContactComponent implements OnInit {
     const componentPosition = this.el.nativeElement.offsetTop
     const scrollPosition = window.pageYOffset
     const offset = componentPosition - 500
+    const tabletOffset = componentPosition - 900
     const contactItem = this.el.nativeElement.querySelectorAll('.contact-content-item')
     const footer = this.el.nativeElement.querySelector('footer')
+    const tablet = this.el.nativeElement.querySelector('.contact').offsetWidth
 
     if (scrollPosition >= offset) {
       contactItem.forEach(item => {
         item.classList.add('stagger')
       })
-
     } else {
       contactItem.forEach(item => {
         item.classList.remove('stagger')
@@ -58,6 +59,35 @@ export class ContactComponent implements OnInit {
       footer.classList.add('animate')
     } else {
       footer.classList.remove('animate')
+    }
+
+    if (tablet <= 1025 && tablet >= 767) {
+      if (scrollPosition >= tabletOffset) {
+        contactItem.forEach(item => {
+          item.classList.add('tablet-stagg')
+          footer.classList.add('tablet')
+        })
+      } else {
+        contactItem.forEach(item => {
+          item.classList.remove('tablet-stagg')
+          footer.classList.remove('tablet')
+        })
+      }
+    }
+
+    if (tablet == 1024) {
+      if (scrollPosition >= tabletOffset - 100) {
+        footer.classList.add('ipad')
+        contactItem.forEach(item => {
+          item.classList.add('ipad-stagg')
+        })
+
+      } else {
+        footer.classList.remove('ipad')
+        contactItem.forEach(item => {
+          item.classList.remove('ipad-stagg')
+        })
+      }
     }
 
   }

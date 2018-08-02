@@ -64,6 +64,14 @@
         opacity: 1;
         transform: rotate(0) translate(0);
       }
+      &.tablet-stagg {
+        opacity: 1;
+        transform: rotate(0) translate(0);
+      }
+      &.ipad-stagg {
+        opacity: 1;
+        transform: rotate(0) translate(0);
+      }
       &-link {}
       &-icon {
         border: 1px solid rgba(255, 255, 255, 0.3);
@@ -135,6 +143,14 @@ footer {
   transform: translateX(200%);
   transition: all 1s cubic-bezier(0, .97, .6, .92);
   &.animate {
+    transform: translate(0);
+    opacity: 1;
+  }
+  &.tablet {
+    transform: translate(0);
+    opacity: 1;
+  }
+  &.ipad {
     transform: translate(0);
     opacity: 1;
   }

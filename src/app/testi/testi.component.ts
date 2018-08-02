@@ -24,7 +24,7 @@ export class TestiComponent implements OnInit {
   ]
 
   containerW: any
-
+  iPadPortrait: any
 
   constructor(private el: ElementRef) { }
 
@@ -32,9 +32,18 @@ export class TestiComponent implements OnInit {
   checkScroll() {
     const componentPosition = this.el.nativeElement.offsetTop
     const scrollPosition = window.pageYOffset
-    const offset = componentPosition - 300
-    const posOffset = componentPosition + 350
+    let offset = componentPosition - 300
+    const posOffset = componentPosition - 600
     const slider = this.el.nativeElement.querySelector('.testi-slider')
+    this.iPadPortrait = this.el.nativeElement.querySelector('#testimonials').offsetWidth
+    console.log(this.iPadPortrait)
+    if (this.iPadPortrait == 1024) {
+      if (scrollPosition >= posOffset) {
+        slider.classList.add('ipad')
+      } else {
+        slider.classList.remove('ipad')
+      }
+    }
 
     if (scrollPosition >= offset) {
       slider.classList.add('animate')
